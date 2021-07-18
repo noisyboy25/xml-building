@@ -11,40 +11,48 @@
       <ul>
         <li><a href="/">Главная</a></li>
         <li><a href="/about.html">Информация</a></li>
+        <li><a href="/file.html">Файл</a></li>
       </ul>
     </nav>
 
     <form action="/buildings/add" method="get">
       <div class="input-group">
         <label for="propertyType">Тип собственности</label>
-        <input type="text" name="propertyType" id="propertyType" />
+        <input type="text" name="propertyType" id="propertyType" required />
       </div>
       <div class="input-group">
         <label for="street">Улица</label>
-        <input type="text" name="street" id="street" />
+        <input type="text" name="street" id="street" required />
       </div>
       <div class="input-group">
         <label for="number">Номер дома</label>
-        <input type="text" name="number" id="number" />
+        <input type="text" name="number" id="number" required />
       </div>
       <div class="input-group">
         <label for="date">Дата сдачи</label>
-        <input type="text" name="date" id="date" />
+        <input type="text" name="date" id="date" required />
       </div>
       <div class="input-group">
         <label for="storeys">Этажность</label>
-        <input type="number" name="storeys" id="storeys" min="1" value="1" />
+        <input
+          type="number"
+          name="storeys"
+          id="storeys"
+          min="1"
+          value="1"
+          required
+        />
       </div>
       <div class="input-group">
         <label for="owner">Собственник</label>
-        <input type="text" name="owner" id="owner" />
+        <input type="text" name="owner" id="owner" required />
       </div>
       <button type="submit">Добавить</button>
     </form>
     <form action="/buildings/delete" method="get">
       <div class="input-group">
         <label for="id">Уникальный идентификатор</label>
-        <input type="text" name="id" id="id" />
+        <input type="text" name="id" id="id" required />
       </div>
       <button type="submit">Удалить</button>
     </form>
