@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Информация | Город</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/about.html">Информация</a></li>
+      </ul>
+    </nav>
+    <div>Имя: <span>Игорь</span></div>
+    <div>Фамилия: <span>Коробецкий</span></div>
+    <div>Группа: <span>УВА-211</span></div>
+    <div>Количество построек: <span id="counter">0</span></div>
+
+    <script>
+      const counter = document.getElementById('counter');
+
+      const fetchCount = async () => {
+        const count = await (await fetch('/buildings/count')).text();
+        if (count) counter.innerHTML = count;
+      };
+      fetchCount();
+    </script>
+  </body>
+</html>

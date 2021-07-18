@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Город</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/about.html">Информация</a></li>
+      </ul>
+    </nav>
+
+    <form action="/buildings/add" method="get">
+      <div class="input-group">
+        <label for="propertyType">Тип собственности</label>
+        <input type="text" name="propertyType" id="propertyType" />
+      </div>
+      <div class="input-group">
+        <label for="street">Улица</label>
+        <input type="text" name="street" id="street" />
+      </div>
+      <div class="input-group">
+        <label for="number">Номер дома</label>
+        <input type="text" name="number" id="number" />
+      </div>
+      <div class="input-group">
+        <label for="date">Дата сдачи</label>
+        <input type="text" name="date" id="date" />
+      </div>
+      <div class="input-group">
+        <label for="storeys">Этажность</label>
+        <input type="number" name="storeys" id="storeys" min="1" value="1" />
+      </div>
+      <div class="input-group">
+        <label for="owner">Собственник</label>
+        <input type="text" name="owner" id="owner" />
+      </div>
+      <button type="submit">Добавить</button>
+    </form>
+    <form action="/buildings/delete" method="get">
+      <div class="input-group">
+        <label for="id">Уникальный идентификатор</label>
+        <input type="text" name="id" id="id" />
+      </div>
+      <button type="submit">Удалить</button>
+    </form>
+    <form action="/buildings/all">
+      <button>Все постройки</button>
+    </form>
+  </body>
+</html>
