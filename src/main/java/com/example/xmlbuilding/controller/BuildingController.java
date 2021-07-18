@@ -1,6 +1,5 @@
 package com.example.xmlbuilding.controller;
 
-import java.io.IOException;
 import java.util.List;
 
 import com.example.xmlbuilding.model.Building;
@@ -19,22 +18,22 @@ public class BuildingController {
   BuildingService service;
 
   @GetMapping("/all")
-  public List<Building> getAllBuildings() throws IOException {
+  public List<Building> getAllBuildings() {
     return service.findAll();
   }
 
   @GetMapping("/find")
-  public Building getById(@RequestParam int id) throws IOException {
+  public Building getById(@RequestParam int id) {
     return service.findById(id);
   }
 
   @GetMapping("/add")
-  public Building create(Building building) throws IOException {
+  public Building create(Building building) {
     return service.create(building);
   }
 
   @GetMapping("/delete")
-  public void delete(@RequestParam int id) throws IOException {
+  public void delete(@RequestParam int id) {
     service.delete(id);
   }
 }
